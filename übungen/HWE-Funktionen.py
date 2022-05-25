@@ -1,3 +1,19 @@
+
+
+"""
+Die funktionen gehören an den Anfang vom skript!
+
+Richtigerer syntax wäre:
+
+    'def parallel(e: int, e1: int):'
+    Damit die ide u. interpreter sicher weiss mit welchem variablen typ sie es zu tun hat.
+
+
+Versuche die funktionen und die schleifen für die eingabe so umzuschreiben, dass 1. nur eine schleife verwendet wird
+und 2. anstelle von fixen 2 widerständen beliebig viele widerstände berechnet werden können.
+"""
+
+
 while True:
     eingabe1 = input("Bitte eingeben ob Serie(s) oder Parrallelschaltung(p) bercechnet werden soll")
     if eingabe1 == "s":
