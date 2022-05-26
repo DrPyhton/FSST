@@ -1,36 +1,34 @@
-while True:
-    eingabe1 = input("Bitte eingeben ob Serie(s) oder Parrallelschaltung(p) bercechnet werden soll")
-    if eingabe1 == "s":
-        break
-    else:
-        if eingabe1 == "p":
-            break
-
-while True:
-    e = input("bitte ersten wiederstand eingeben")
-    if e.isnumeric():
-        e = int(e)
-        break
-while True:
- e1 = input("bitte zweiten wiederstand eingeben")
- if e1.isnumeric():
-     e1 = int(e1)
-     break
-
-def parallel(e, e1):
-    par = 1/(1/e + 1/e1)
+def parallel(e: list):
+    par = float()
+    for i in e:
+        par += (1 / float(i))
+    par = 1 / par
     print(par)
 
 
-
-def serie(e, e1):
-    ser = e + e1
+def serie(e: list):
+    ser = float()
+    for i in e:
+        ser += float(i)
     print(ser)
 
 
+while True:
+    eingabe1 = input("Bitte eingeben ob Serie(s) oder Parrallelschaltung(p) bercechnet werden soll(zum beenden q eingeben):")
+    if eingabe1 not in "spq":
+        continue
 
-if eingabe1 == "p":
-    parallel(e, e1)
+    if eingabe1 == "q":
+        print("ende")
+        quit(0)
 
-if eingabe1 == "s":
-    serie(e, e1)
+    e = input("Widerstände mit kommer trennen")
+    e = e.split(",")
+
+    if eingabe1 == "p":
+        parallel(e)
+
+    elif eingabe1 == "s":
+        serie(e)
+
+

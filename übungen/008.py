@@ -1,8 +1,8 @@
 import math
 
 def solve(a, b, c):
-    erg1 = (*b + math.sqrt(b*b - 4*a*c)/(2*a))
-    erg2 = ( * b + math.sqrt(b * b - 4 * a * c)/(2*a))
+    erg1 = (-b + math.sqrt(b*b - 4*a*c)/(2*a))
+    erg2 = ( -b + math.sqrt(b * b - 4 * a * c)/(2*a))
     erg_tuple = (erg1, erg2)
     return erg_tuple
 
